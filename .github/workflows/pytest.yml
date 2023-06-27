@@ -1,0 +1,30 @@
+name: PyTest
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      # Setup Python (faster than using Python container)
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip coverage
+          pip install .[test]
+
+      - name: Run test suite
+        run: |
+          pytest --cov
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
