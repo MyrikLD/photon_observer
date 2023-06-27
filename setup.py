@@ -15,6 +15,7 @@ requirements = [
 ]
 tests_require = [
     "pytest>7.0",
+    "pytest-cov"
 ]
 
 setup(
