@@ -1,4 +1,5 @@
 # Photon Observer
+[![codecov](https://codecov.io/gh/MyrikLD/photon_observer/branch/main/graph/badge.svg?token=64EM7VM9HK)](https://codecov.io/gh/MyrikLD/photon_observer)
 
 Tools for working with the [Photon protocol](https://doc.photonengine.com/realtime/current/reference/binary-protocol).
 
